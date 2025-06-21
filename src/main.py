@@ -8,10 +8,10 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
 
 from flask import Flask, send_from_directory, request, jsonify
 from flask_cors import CORS
-from routes.ai_recommendations import ai_bp
-from routes.products import products_bp
-from routes.virtual_tryons import virtual_bp
-from routes.monetization import monetization_bp
+from .routes.ai_recommendations import ai_bp
+from .routes.products import products_bp
+from .routes.virtual_tryons import virtual_bp
+from .routes.monetization import monetization_bp
 
 app = Flask(__name__, static_folder=os.path.join(os.path.dirname(__file__), 'static'))
 app.config['SECRET_KEY'] = 'fashion_ai_secret_key_2024'
